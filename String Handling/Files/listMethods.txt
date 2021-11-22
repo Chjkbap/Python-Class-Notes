@@ -1,0 +1,10 @@
+List Methods
+
+list.append(item)		add item at end of list
+list.insert(index, item)	add item at index
+list.pop(index)			remove item at index
+list.remove(item)		remove item
+list.index(item)		search for index of item
+list.count(item)		get occurrences of item
+list.reverse()			reverse list
+list.sort()			sort list
