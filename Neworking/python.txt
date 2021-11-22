@@ -1,0 +1,6 @@
+'''  invoke s.listen method to start up the server and pass in the number of connections server will accept as parameter  '''
+print("Server listening on port:", port)
+s.listen(1)
+
+''' invoke s.accept method to accept client connect request when a client tries to connect to the server. This methods returns 
+the connection object and the address from which the request came from '''

@@ -1,0 +1,32 @@
+Thread class that is used for implementing threads, and that class also contains 
+some predefined methods used by programmers in multi-threaded programming. These are:
+
+run(): It acts as the entry of the thread
+start(): is used for starting the thread by calling the run()
+isAlive(): is used to verify whether the still executing or not
+getName(): is used for returning the name of a thread
+setName(): is used to set the name of the thread
+
+multiple threads that can execute in parallel to make use of the underlying 
+processor and improve the performance of written application, so that
+it is fast and user have the best possible experience.
+ Three ways to create multiple threads are as follows
+
+ 1. Using a function by creating an object type thread, pass the target to the created object and the second 
+ parameter is an argument to that function  example is t = Thread(target = functionName, args).  
+ Then invoke t.start() thread instance and the PVM will create
+ a  new thread to run in parallel with the main thread. As part of the thread the code within this function will
+ be executed and arguments are passed to that function
+ 
+ 2. Secondly is extend the thread class, which is from python threading module example class MyThread(Thread), 
+ this module will be imported and extend the thread class and override the run() method, and within it define
+  all the functionality you want inside the thread. Then create an instance of MyThread Class and invoke it using 
+  t.start(), then spawn off a new thread and internally execute the run method by the PVM.
+  
+ 3. The hybrid approach, similarly create new class and add theFunction within the class, but the class doesn't 
+  extend the Thread class. Instead create an instance of the thread and then pass the object dot theFuncion() 
+  to be executed within the that object as the target.  The the argument is the second parameter
+   example t=Thread(target = myobj.theFunction,args) and imternally the PVM will spawn off the new thread and 
+   it will execute all the code within the function as a part of the thread.'''
+
+   https://dev.to/freddthink/an-introduction-to-concurrency-in-python-5cec
